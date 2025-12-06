@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Karn Raj Mishra | Future Strategy & Business Consultant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Portfolio of Karn Raj Mishra – aspiring business & strategy consultant with skills in analytics, finance and go-to-market thinking."
+  />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #030712;
+      --bg-alt: #020617;
+      --accent: #6366f1;
+      --accent-soft: rgba(99, 102, 241, 0.18);
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --card: #020617;
+      --border: #1f2937;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.75);
+      --radius-lg: 1.4rem;
+      --radius-full: 999px;
+      --transition-fast: 160ms ease-out;
+      --transition-med: 240ms ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top, #1e293b 0, #020617 50%, #000 100%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    @media (min-width: 1024px) {
+      section {
+        padding: 5rem 0;
+      }
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(18px);
+      background: rgba(2, 6, 23, 0.9);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.7rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 1rem;
+      background: radial-gradient(circle at 25% 20%, #4f46e5, #0f172a 70%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .brand-text {
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      font-size: 1.02rem;
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 1.7rem;
+      font-size: 0.92rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      position: relative;
+      transition: color var(--transition-fast);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.22rem;
+      width: 0%;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #6366f1, #22c55e);
+      transition: width var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .btn-nav {
+      display: none;
+    }
+
+    .hamburger {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 22px;
+      height: 2px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      transition: all var(--transition-fast);
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(3px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-3px) rotate(-45deg);
+    }
+
+    .mobile-menu {
+      display: none;
+      padding-bottom: 0.75rem;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 0.5rem 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--text);
+    }
+
+    @media (min-width: 768px) {
+      .hamburger {
+        display: none;
+      }
+      .nav-links {
+        display: flex;
+      }
+      .btn-nav {
+        display: inline-flex;
+      }
+      .mobile-menu {
+        display: none !important;
+      }
+    }
+
+    /* BUTTONS */
+
+    .btn {
+      border-radius: var(--radius-full);
+      padding: 0.6rem 1.4rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text);
+      transition:
+        background var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border-color var(--transition-fast);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1, #22c55e);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 45px rgba(79, 70, 229, 0.55);
+    }
+
+    .btn-outline {
+      border-color: rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    .btn-outline:hover {
+      border-color: #6366f1;
+      background: rgba(15, 23, 42, 1);
+      transform: translateY(-1px);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding-top: 2.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.7rem;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.9fr);
+      }
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      border-radius: var(--radius-full);
+      padding: 0.25rem 0.75rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.8);
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.7);
+    }
+
+    .hero-title {
+      font-size: clamp(2.15rem, 3vw + 1.6rem, 3rem);
+      line-height: 1.1;
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #818cf8, #22c55e);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-role {
+      font-size: 0.98rem;
+      color: #cbd5f5;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 570px;
+      margin-bottom: 1.7rem;
+    }
+
+    .gita-pill {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 0.1rem;
+      padding: 0.5rem 0.8rem;
+      border-radius: 0.9rem;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.75rem;
+      color: var(--muted);
+      max-width: 330px;
+      margin-bottom: 1.2rem;
+    }
+
+    .gita-pill strong {
+      color: #e5e7eb;
+      font-size: 0.78rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-meta span strong {
+      color: #e5e7eb;
+    }
+
+    /* HERO RIGHT CARD */
+
+    .hero-card {
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at top left, #111827 0, #020617 55%);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 1.5rem 1.5rem 1.8rem;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-badge {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      font-size: 0.7rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero-avatar-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 1.8rem;
+      overflow: hidden;
+      background: radial-gradient(circle at 30% 30%, #4f46e5, #0f172a 70%);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .hero-initials {
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: #e5e7eb;
+    }
+
+    .hero-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-tag {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: var(--radius-full);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      color: #e5e7eb;
+    }
+
+    .hero-highlights {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.9rem;
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+
+    .hero-highlights span strong {
+      display: block;
+      color: #e5e7eb;
+      font-size: 0.98rem;
+    }
+
+    @media (max-width: 480px) {
+      .hero-card {
+        padding: 1.25rem 1.2rem 1.5rem;
+      }
+      .hero-avatar {
+        width: 82px;
+        height: 82px;
+      }
+    }
+
+    /* SECTION HEADERS */
+
+    .section-header {
+      margin-bottom: 2.4rem;
+    }
+
+    .section-kicker {
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.09em;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1.2fr 0.9fr;
+      }
+    }
+
+    .about-text {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .about-text p + p {
+      margin-top: 0.75rem;
+    }
+
+    .about-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.4rem;
+      font-size: 0.85rem;
+    }
+
+    .about-list-item {
+      padding: 0.7rem 0.85rem;
+      border-radius: 0.9rem;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .about-list-item span {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .about-list-item strong {
+      font-weight: 500;
+      color: #e5e7eb;
+    }
+
+    .about-card {
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top, #020617 0, #000 60%);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      padding: 1.35rem 1.3rem;
+      font-size: 0.86rem;
+      color: var(--muted);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .about-card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+      color: #e5e7eb;
+    }
+
+    .about-pill {
+      display: inline-flex;
+      padding: 0.25rem 0.7rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      background: rgba(22, 163, 74, 0.08);
+      border: 1px solid rgba(52, 211, 153, 0.35);
+      color: #a7f3d0;
+      margin-bottom: 0.75rem;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-card {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      padding: 0.9rem 1rem;
+      font-size: 0.86rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.8);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .skill-name {
+      font-weight: 500;
+      color: #e5e7eb;
+    }
+
+    .skill-level {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .skill-bar {
+      width: 100%;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(30, 64, 175, 0.5);
+      overflow: hidden;
+      margin-top: 0.3rem;
+    }
+
+    .skill-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #6366f1, #22c55e);
+      border-radius: 999px;
+      transition: width 0.8s ease-out;
+    }
+
+    /* FOCUS / SERVICES */
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.1rem;
+    }
+
+    .focus-card {
+      border-radius: 1rem;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      padding: 1rem 1rem 1.1rem;
+      font-size: 0.86rem;
+      color: var(--muted);
+      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .focus-card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+      color: #e5e7eb;
+    }
+
+    .focus-tag {
+      font-size: 0.7rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.25);
+      display: inline-block;
+      margin-bottom: 0.4rem;
+    }
+
+    .focus-card ul {
+      padding-left: 1rem;
+      margin-top: 0.35rem;
+      font-size: 0.8rem;
+    }
+
+    .focus-card ul li + li {
+      margin-top: 0.2rem;
+    }
+
+    /* PROJECTS */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .project-card {
+      border-radius: 1.2rem;
+      background: rgba(15, 23, 42, 0.97);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.95);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition:
+        transform var(--transition-med),
+        box-shadow var(--transition-med),
+        border-color var(--transition-med);
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 55px rgba(15, 23, 42, 1);
+      border-color: rgba(129, 140, 248, 0.95);
+    }
+
+    .project-preview {
+      height: 150px;
+      background:
+        radial-gradient(circle at top left, #4f46e5, #0f172a 55%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-preview::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(
+          120deg,
+          rgba(15, 23, 42, 0.25) 0,
+          transparent 40%,
+          rgba(15, 23, 42, 0.7) 100%
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          rgba(15, 23, 42, 0.5) 0,
+          rgba(15, 23, 42, 0.5) 1px,
+          transparent 1px,
+          transparent 4px
+        );
+      mix-blend-mode: soft-light;
+    }
+
+    .project-body {
+      padding: 1rem 1rem 1.1rem;
+      font-size: 0.88rem;
+    }
+
+    .project-title {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .project-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .project-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .project-tag {
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(30, 64, 175, 0.35);
+      font-size: 0.7rem;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 0.35rem;
+    }
+
+    .project-links a {
+      font-size: 0.75rem;
+      color: #c4c9ff;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 2px;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+    }
+
+    .contact-text {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .contact-text p + p {
+      margin-top: 0.7rem;
+    }
+
+    .contact-form {
+      background: rgba(15, 23, 42, 0.98);
+      border-radius: 1.3rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 1.3rem 1.2rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.82rem;
+    }
+
+    label {
+      color: #e5e7eb;
+    }
+
+    input,
+    textarea {
+      border-radius: 0.8rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.97);
+      padding: 0.55rem 0.7rem;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.85rem;
+      outline: none;
+      transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast);
+      resize: vertical;
+      min-height: 2.4rem;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #6366f1;
+      box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.5);
+      background: #020617;
+    }
+
+    .form-helper {
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .form-note {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid rgba(148, 163, 184, 0.25);
+      padding: 1.1rem 0 1.4rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 2px;
+    }
+
+    /* JS-DRIVEN RESPONSIVE TWEAKS */
+
+    body[data-device="mobile"] .hero-title {
+      font-size: 2.1rem;
+    }
+
+    body[data-device="mobile"] .hero {
+      padding-top: 2rem;
+    }
+
+    body[data-device="tablet"] .hero-title {
+      font-size: 2.5rem;
+    }
+  </style>
+</head>
+<body data-device="desktop">
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="brand-logo">KRM</div>
+        <div class="brand-text">Karn Raj Mishra</div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#focus">Strategy + Finance</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="https://github.com/karnrajmishra" target="_blank" class="btn btn-outline btn-nav">
+        GitHub
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="container mobile-menu" id="mobileMenu">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#focus">Strategy + Finance</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            Future strategy & business consultant in the making
+          </div>
+
+          <h1 class="hero-title">
+            I’m <span>Karn&nbsp;Raj&nbsp;Mishra</span>
+          </h1>
+
+          <div class="hero-role">
+            Blending strategy, data & finance to build winning businesses.
+          </div>
+
+          <div class="gita-pill">
+            <strong>“कर्मण्येवाधिकारस्ते मा फलेषु कदाचन”</strong>
+            <span>Focus on the work, not on the fruits </span>
+          </div>
+
+          <p class="hero-subtitle">
+            I’m on a journey from data & analysis to <strong>business consulting, go-to-market
+            strategy and high-impact decision making</strong>. I enjoy understanding markets,
+            customers, numbers and turning all of that into practical action.
+          </p>
+
+          <div class="hero-actions">
+            <a href="mailto:mkarnraj@gmail.com" class="btn btn-primary">
+              Contact Me
+            </a>
+            <a href="#projects" class="btn btn-outline">See My Work</a>
+          </div>
+
+          <div class="hero-meta">
+            <span><strong>Based in:</strong> India</span>
+            <span><strong>Direction:</strong> Strategy · GTM · Consulting</span>
+            <span><strong>Next step:</strong> Exploring MBA in Finance & Operations</span>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Open for internships & early roles
+          </div>
+
+          <div class="hero-avatar-wrapper">
+            <div class="hero-avatar">
+              <img
+                src="images/karn-landing.jpg"
+                alt="Karn Raj Mishra in formal suit in front of academic building"
+                onerror="this.style.display='none'; this.closest('.hero-avatar').classList.add('hero-initials'); this.closest('.hero-avatar').textContent='KRM';"
+              />
+            </div>
+            <div>
+              <h3>Karn Raj Mishra</h3>
+              <p>
+                Aspiring business & strategy consultant with a strong base in analytics,
+                financial thinking and execution.
+              </p>
+            </div>
+          </div>
+
+          <div class="hero-tags">
+            <span class="hero-tag">Business Strategy</span>
+            <span class="hero-tag">Go-to-Market</span>
+            <span class="hero-tag">Financial Analysis</span>
+            <span class="hero-tag">Excel / Power BI</span>
+            <span class="hero-tag">Problem Solving</span>
+          </div>
+
+          <div class="hero-highlights">
+            <span>
+              <strong>10+</strong>
+              Academic & practice projects
+            </span>
+            <span>
+              <strong>3</strong>
+              Core pillars: Strategy · Finance · Data
+            </span>
+            <span>
+              <strong>∞</strong>
+              Curiosity & learning
+            </span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">About</div>
+          <h2 class="section-title">Who I’m becoming</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am <strong>Karn Raj Mishra</strong>, building myself towards a career in
+              <strong>business consulting, corporate strategy and go-to-market execution</strong>.
+              Data and numbers are my tools, but my goal is to use them to shape decisions at a
+              business level.
+            </p>
+            <p>
+              My current foundation is in <strong>Excel, analytics and financial thinking</strong>.
+              I’m actively learning more about markets, operations, and how different parts of a
+              business connect to create value.
+            </p>
+            <p>
+              Over time, I see myself growing from an analyst to a
+              <strong>trusted advisor to CXOs</strong> – the person who can understand the problem,
+              structure it clearly, and design a practical solution and roadmap.
+            </p>
+
+            <div class="about-list">
+              <div class="about-list-item">
+                <span>Career vision</span>
+                <strong>Strategy / Business Consultant & top business executive</strong>
+              </div>
+              <div class="about-list-item">
+                <span>Way forward</span>
+                <strong>Strong analytics → MBA (Finance & Ops) → Strategy roles</strong>
+              </div>
+              <div class="about-list-item">
+                <span>Strengths</span>
+                <strong>Structured thinking, curiosity, consistency</strong>
+              </div>
+              <div class="about-list-item">
+                <span>Currently working on</span>
+                <strong>Data cleaning, financial analysis & communication skills</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <span class="about-pill">Long-term play, not a short sprint</span>
+            <h3>How I think</h3>
+            <p>
+              • I like to break messy problems into clean, logical steps and question the
+              assumptions behind them.
+            </p>
+            <p>
+              • Numbers matter, but so does the story. I want to be able to explain insights so
+              that non-technical people can act on them with confidence.
+            </p>
+            <p>
+              • I am open to feedback, tough projects and steep learning curves – because they
+              push me closer to my goal of becoming a high-impact business leader.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Skills</div>
+          <h2 class="section-title">Tools & abilities I’m building</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-name">Business & Strategy Thinking</div>
+            <div class="skill-level">Problem structuring, market & competitor view</div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width: 70%"></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-name">Microsoft Excel</div>
+            <div class="skill-level">Data cleaning, analysis, dashboards</div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width: 80%"></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-name">Financial Analysis (Learning)</div>
+            <div class="skill-level">Basic models, ratios, business impact view</div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width: 55%"></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-name">Data Visualization</div>
+            <div class="skill-level">Excel / Power BI style dashboards</div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width: 60%"></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-name">SQL / Databases (Learning)</div>
+            <div class="skill-level">Joins, filters, aggregations</div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width: 45%"></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-name">Problem Solving & Communication</div>
+            <div class="skill-level">Explaining insights to non-technical people</div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" style="width: 72%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOCUS / STRATEGY + FINANCE -->
+    <section id="focus">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Focus Areas</div>
+          <h2 class="section-title">Strategy, markets & financial thinking</h2>
+        </div>
+
+        <div class="focus-grid">
+          <article class="focus-card">
+            <span class="focus-tag">Strategy & GTM</span>
+            <h3>Business & Go-to-Market Thinking</h3>
+            <p>
+              Understanding where to play and how to win – not just what the numbers say.
+            </p>
+            <ul>
+              <li>Basic market & competitor analysis</li>
+              <li>Customer / user understanding</li>
+              <li>Ideas for positioning & GTM moves</li>
+            </ul>
+          </article>
+
+          <article class="focus-card">
+            <span class="focus-tag">Finance</span>
+            <h3>Finance, Modelling & Impact</h3>
+            <p>
+              Linking strategy with numbers so decisions are financially sound.
+            </p>
+            <ul>
+              <li>Learning financial statement basics</li>
+              <li>Ratio & trend analysis</li>
+              <li>Intro to financial modelling & scenarios</li>
+            </ul>
+          </article>
+
+          <article class="focus-card">
+            <span class="focus-tag">Ops & Execution</span>
+            <h3>Operations & Execution Discipline</h3>
+            <p>
+              Thinking about how strategies can actually be implemented on the ground.
+            </p>
+            <ul>
+              <li>Process view: inputs → actions → outcomes</li>
+              <li>Data-driven monitoring of execution</li>
+              <li>Interest in MBA in Finance & Operations</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Projects</div>
+          <h2 class="section-title">From raw data to business insight</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-preview"></div>
+            <div class="project-body">
+              <h3 class="project-title">Sales Performance Dashboard</h3>
+              <p class="project-desc">
+                Cleaned messy sales data in Excel and built a dashboard showing revenue by region,
+                product and time. Helped identify underperforming areas and top products.
+              </p>
+              <div class="project-meta">
+                <div class="project-tags">
+                  <span class="project-tag">Excel</span>
+                  <span class="project-tag">Data Cleaning</span>
+                  <span class="project-tag">Dashboard</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" target="_blank">View</a>
+                  <a href="#" target="_blank">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview"></div>
+            <div class="project-body">
+              <h3 class="project-title">Customer Churn Story</h3>
+              <p class="project-desc">
+                Analysed customer data to understand which segments were churning and why, and
+                translated the findings into 3–4 simple actions for business teams.
+              </p>
+              <div class="project-meta">
+                <div class="project-tags">
+                  <span class="project-tag">Analytics</span>
+                  <span class="project-tag">Storytelling</span>
+                  <span class="project-tag">Strategy Angle</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" target="_blank">Case Note</a>
+                  <a href="#" target="_blank">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview"></div>
+            <div class="project-body">
+              <h3 class="project-title">This Portfolio Website</h3>
+              <p class="project-desc">
+                A responsive, JS-enhanced portfolio that reflects my ambition to move from data
+                to strategy and business consulting, deployed on GitHub Pages.
+              </p>
+              <div class="project-meta">
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a href="#" target="_blank">Live</a>
+                  <a href="#" target="_blank">Repo</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Contact</div>
+          <h2 class="section-title">Let’s talk about business & strategy</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-text">
+            <p>
+              If you’re working on something where <strong>strategy, numbers and execution</strong>
+              need to come together – I’d love to be involved, learn and contribute.
+            </p>
+            <p>
+              I’m currently open to <strong>internships, projects, and entry-level roles</strong>
+              around analytics, business analysis, strategy or operations.
+            </p>
+            <p>
+              You can reach out using this form or directly at
+              <strong>mkarnraj@gmail.com</strong>.
+            </p>
+          </div>
+
+          <form
+            class="contact-form"
+            action="mailto:mkarnraj@gmail.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Tell me about the role, project or idea..."
+                required
+              ></textarea>
+              <div class="form-helper">
+                Your default email app will open when you submit.
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top: 0.3rem">
+              Send Message
+            </button>
+
+            <p class="form-note">
+              Later, this form can be connected to a backend or a service like Formspree /
+              Getform for smoother submissions.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Karn Raj Mishra. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="https://github.com/karnrajmishra" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/karnrajmishra" target="_blank">LinkedIn</a>
+        <a href="#hero">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      mobileMenu.classList.toggle("open");
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        mobileMenu.classList.remove("open");
+      });
+    });
+
+    // Current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // JS-powered responsiveness: set data-device attribute on body
+    function updateDeviceTag() {
+      const width = window.innerWidth;
+      const body = document.body;
+
+      if (width < 640) {
+        body.setAttribute("data-device", "mobile");
+      } else if (width < 1024) {
+        body.setAttribute("data-device", "tablet");
+      } else {
+        body.setAttribute("data-device", "desktop");
+      }
+    }
+
+    window.addEventListener("resize", updateDeviceTag);
+    window.addEventListener("orientationchange", updateDeviceTag);
+    updateDeviceTag();
+  </script>
+</body>
+</html>
